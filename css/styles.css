@@ -537,10 +537,7 @@ transform: translateY(0);
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.footer-email-sbcr {
-    margin-right: 16px;
+    flex-wrap: wrap;
 }
 
 .footer-text-input {
@@ -550,6 +547,11 @@ transform: translateY(0);
     line-height: 1.5;
     letter-spacing: 0.02em;
     margin-bottom: 16px;
+}
+
+.modal-footer-email {
+    display: flex;
+    gap: 24px;
 }
 
 .footer-email-label {}
@@ -564,6 +566,11 @@ transform: translateY(0);
     padding: 8px 0 8px 16px;
     outline: none;
     margin-right: 24px;
+    color: #FFF;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 2.0;
+    letter-spacing: 0.04em;
 }
 
 .footer-email-input::placeholder {
@@ -574,31 +581,23 @@ line-height: 2.0;
 letter-spacing: 0.04em;
 }
 
-.footer-btn-sbcr {
-    display: inline-flex;
-    gap: 16px;
-    padding: 8px 24px;
-   
-}
 
 .footer-button {
-    display: inline-flex;
-    position: relative;
-    top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 8px 24px;
     border-radius: 4px;
     background: #4D5AE5;
-    width: 165px;
+    min-width: 165px;
     height: 40px;
+    gap: 16px;
+
 }
 
 .wrapper-icon-sbcr {
     width: 24px;
     height: 24px;
-    position: absolute;
-    top: 50%;
-    left: 117px;
-    transform: translateY(-50%);
     fill: #FFFFFF;
 
 }
@@ -633,6 +632,8 @@ letter-spacing: 0.04em;
     border-radius: 4px;
     background: #FCFCFC;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn {
@@ -647,10 +648,11 @@ letter-spacing: 0.04em;
     border-radius: 50%;
     background-color: #E7E9FC;
     border-width: 1px;
-    border: rgba(0, 0, 0, 0.10);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
     padding: 8px 8px;
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
 
 .modal-btn-icon {
@@ -665,6 +667,7 @@ letter-spacing: 0.04em;
 
 .modal-btn:hover {
     background-color: #404BBF;
+    border: none;
 }
 
 .modal-caption {
@@ -702,6 +705,7 @@ label {
 
  .modal-form-wrapper {
     position: relative;
+    margin-bottom: 16px;
  }
 
  .modal-form-input {
@@ -710,13 +714,14 @@ label {
     border-radius: 4px;
     border: 1px solid rgba(46, 47, 66, 0.40);
     padding: 8px 0 8px 38px;
-    outline: none;
+    outline: transparent;
+    background-color: transparent;
 
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
  .modal-form-input:focus {
-    border: 1px solid #4D5AE5;
+    border-color: #4D5AE5;
  }
 
  .modal-form-icon {
@@ -741,13 +746,19 @@ label {
     border-radius: 4px;
     border: 1px solid rgba(46, 47, 66, 0.40);
     padding: 8px 16px;
-    outline: none;
+    outline: transparent;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    background-color: transparent;
+    resize: none;
 
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .review-text:focus {
-    border: 1px solid #4D5AE5;
+    border-color: #4D5AE5;
 }
 
 .review-text::placeholder {
@@ -758,8 +769,10 @@ label {
     letter-spacing: 0.04em;
 }
 
-.review-form-agreement {
+.review-form {
     margin-bottom: 24px;
+}
+.review-form-agreement {
     color: #8E8F99;
     font-size: 12px;
     font-weight: 400;

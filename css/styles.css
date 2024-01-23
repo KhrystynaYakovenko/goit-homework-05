@@ -534,10 +534,7 @@ transform: translateY(0);
 }
 
 .container-email-input {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+   
 }
 
 .footer-text-input {
@@ -595,9 +592,7 @@ letter-spacing: 0.04em;
 
 }
 
-.wrapper-icon-sbcr {
-    width: 24px;
-    height: 24px;
+.icon-sbcr {
     fill: #FFFFFF;
 
 }
@@ -664,8 +659,13 @@ letter-spacing: 0.04em;
     fill: #FFFFFF
 }
 
-.modal-btn:hover, 
-.modal-btn:focus{
+.modal-btn:hover {
+    background-color: #404BBF;
+    border: none;
+    fill: #ffffff;
+}
+
+..modal-btn:focus {
     background-color: #404BBF;
     border: none;
     fill: #ffffff;
@@ -737,7 +737,7 @@ label {
 
  }
 
- .modal-form-input:focus + .modal-form-icon {
+ .modal-form-input:focus .modal-form-icon {
     fill: #4D5AE5;
  }
 
@@ -804,7 +804,7 @@ label {
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-input[type='checkbox']:checked ~ .review-form-checkbox > .review-form-icon {
+input[type='checkbox']:checked + .review-form-checkbox > .review-form-icon {
     background-color: #404BBF;
     border: none;
     fill: #F4F4FD;

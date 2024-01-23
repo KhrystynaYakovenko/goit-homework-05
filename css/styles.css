@@ -498,6 +498,7 @@ transform: translateY(0);
 .container-footer-social-icon {
     display: block;
     align-items: center;
+    margin-right: 80px;
 }
 .footer-social-media-text {
     color:  #FFF;
@@ -531,6 +532,77 @@ transform: translateY(0);
 .footer-social-link:hover, .footer-social-link:focus {
     background-color: #31D0AA;
 }
+
+.container-email-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-email-sbcr {
+    margin-right: 16px;
+}
+
+.footer-text-input {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+}
+
+.footer-email-label {}
+
+.footer-email-input {
+    width: 264px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    background: transparent;
+    padding: 8px 0 8px 16px;
+    outline: none;
+    margin-right: 24px;
+}
+
+.footer-email-input::placeholder {
+color: #FFF;
+font-size: 12px;
+font-weight: 400;
+line-height: 2.0;
+letter-spacing: 0.04em;
+}
+
+.footer-btn-sbcr {
+    display: inline-flex;
+    gap: 16px;
+    padding: 8px 24px;
+   
+}
+
+.footer-button {
+    display: inline-flex;
+    position: relative;
+    top: 20px;
+    padding: 8px 24px;
+    border-radius: 4px;
+    background: #4D5AE5;
+    width: 165px;
+    height: 40px;
+}
+
+.wrapper-icon-sbcr {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 117px;
+    transform: translateY(-50%);
+    fill: #FFFFFF;
+
+}
+
 /* #endregion Footer */
 /* #region Modal */
 .backdrop {
@@ -614,8 +686,11 @@ transform: translateY(0);
    margin-bottom: 8px; 
 }
 
+label {
+    display: block;
+}
+
 .modal-form-label {
-    width: 41px;
     margin-bottom: 4px;
 
     color: #8E8F99;
@@ -626,7 +701,7 @@ transform: translateY(0);
 }
 
  .modal-form-wrapper {
-position: relative;
+    position: relative;
  }
 
  .modal-form-input {
@@ -635,6 +710,13 @@ position: relative;
     border-radius: 4px;
     border: 1px solid rgba(46, 47, 66, 0.40);
     padding: 8px 0 8px 38px;
+    outline: none;
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
+
+ .modal-form-input:focus {
+    border: 1px solid #4D5AE5;
  }
 
  .modal-form-icon {
@@ -642,10 +724,89 @@ position: relative;
     top: 50%;
     left: 16px;
     transform: translateY(-50%);
+    fill: #2E2F42;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
 
  }
 
- label {
+ .modal-form-input:focus + .modal-form-icon {
+    fill: #4D5AE5;
+ }
+
+.review-text {
+    width: 360px;
+    height: 120px;
+    border-radius: 4px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    padding: 8px 16px;
+    outline: none;
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-text:focus {
+    border: 1px solid #4D5AE5;
+}
+
+.review-text::placeholder {
+    color: rgba(46, 47, 66, 0.40);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+}
+
+.review-form-agreement {
+    margin-bottom: 24px;
+    color: #8E8F99;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+}
+
+.checkbox {
+
+}
+
+.review-form-checkbox {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border: 1px solid rgba(46, 47, 66, 0.40);
+    border-radius: 2px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-form-icon {
+    fill: #F4F4FD;
+    opacity: 0;
+
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+input[type='checkbox']:checked ~ .review-form-checkbox {
+    background-color: #404BBF;
+    border-color: transparent;
+}
+
+input[type='checkbox']:checked~.review-form-checkbox > .review-form-icon {
+    opacity: 1;
+}
+
+.review-form-link {
+    color: #4D5AE5;
+    text-decoration-line: underline;
+}
+
+.review-form-btn {
+    margin: 0 auto;
     display: block;
- }
+}
+
 /* #endregion Modal */
